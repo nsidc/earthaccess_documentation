@@ -1,0 +1,27 @@
+project:
+  type: website
+
+website:
+  title: "`earthaccess` documentation outline"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+      - href: getting_started.qmd
+        text: "Getting Started"
+  sidebar:
+    contents:
+      - href: getting_started.qmd
+      - href: user_guide.qmd
+      - href: how_to.qmd
+        
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+

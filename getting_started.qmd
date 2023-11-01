@@ -1,0 +1,76 @@
+---
+title: "Getting Started"
+subtitle: "Install `earthaccess`, then follow a simple example to search for and download data."
+---
+
+## Requirements
+
+To use `earthaccess` you will Python 3.8 or higher.
+
+## Install
+
+The latest release of `earthaccess` can be installed using mamba, conda or pip.  We recommend mamba because it is generally faster,
+and it is what all the cool kids are using these days.
+
+#### Using mamba
+
+```
+mamba install -c conda-forge earthaccess
+```
+
+#### Using conda
+
+```
+conda install -c conda-forge earthaccess
+```
+
+#### Using pip
+
+```
+pip install earthaccess
+```
+
+## Search for data
+
+`earthaccess` allows you to search for and access data in as little as three steps.  We give a very quick example below.
+Read the [User Guide](user_guide.qmd) for more information.  If you want to quickly find how to perform some common searches and data access,
+take a look at our [How-to](how_to.qmd) guide.
+
+
+### Step 1: Login
+
+To access NASA data, you have to login using your Earth Data Login credentials.  You can register for a free Earth Data Login account [here](https://urs.earthdata.nasa.gov/).
+
+By default, `earthaccess` will look for your Earth Data Login credentials in a `.netrc` file, or in environment variables `EARTHDATA_USERNAME` and `EARTHDATA_PASSWORD`.  If you don't
+have either of these set up, you can login manually.  See [Authenticating](authenticate.qmd) to learn how to create a `.netrc` file or environment variables.
+
+```
+import earthaccess
+
+earthaccess.login()
+```
+
+
+### Step 2: Search for data
+
+As an example, we'll search for data from the NASA ICESat-2 mission.  ATL06
+
+
+```
+results = earthaccess.search_data(
+    short_name='ATL06'
+    bounding_box=(-10, 20, 10, 50),
+    temporal=("1999-02", "2019-03"),
+    count=10
+)
+```
+
+### Step 3. Download the files
+
+Once you have found the files you want, you can download them to your local machine.
+
+```
+files = earthaccess.download(results, "./local_folder")
+```
+
+If you are working in the cloud and the data files are hosted in the cloud, you can stream the data directly, without having to download data.  See [Direct S3 Access]()

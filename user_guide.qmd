@@ -1,0 +1,20 @@
+---
+title: "User Guide"
+---
+
+This user guide provides examples and a more in-depth guide to using `earthaccess` to search for datasets and data files, and to access data files when working locally or in the cloud.
+
+
+## Authentication
+
+
+## Search for data sets
+
+
+## Search for data
+
+
+## Download data to a local machine
+
+
+## Working in the cloud

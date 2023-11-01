@@ -1,0 +1,107 @@
+[
+  {
+    "objectID": "notes.html",
+    "href": "notes.html",
+    "title": "Notes for earthaccess docs",
+    "section": "",
+    "text": "Quick Start with on-prem, and out-of-region and in-region access\nThen some common workflows\nearthaccess.login\nearthaccess.search_datasets\nearthaccess.search_data\nearthaccess.download\nS3 access\nusing bounding boxes and polygons\nsupport for kml\nFind number of granules and size of data\n\n\n\nHow to use earthaccess.Auth to authenticate other sessions\nh5coro?\npydap\nperiodic time frames for week, for month"
+  },
+  {
+    "objectID": "notes.html#must-haves",
+    "href": "notes.html#must-haves",
+    "title": "Notes for earthaccess docs",
+    "section": "",
+    "text": "Quick Start with on-prem, and out-of-region and in-region access\nThen some common workflows\nearthaccess.login\nearthaccess.search_datasets\nearthaccess.search_data\nearthaccess.download\nS3 access\nusing bounding boxes and polygons\nsupport for kml\nFind number of granules and size of data"
+  },
+  {
+    "objectID": "notes.html#nice-to-have",
+    "href": "notes.html#nice-to-have",
+    "title": "Notes for earthaccess docs",
+    "section": "",
+    "text": "How to use earthaccess.Auth to authenticate other sessions\nh5coro?\npydap\nperiodic time frames for week, for month"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to earthaccess",
+    "section": "",
+    "text": "earthaccess is a python library to search for, and download or stream NASA Earth science data with just a few lines of code.\nIn the age of cloud computing, the power of open science only reaches its full potential if we have easy-to-use workflows that facilitate research in an inclusive, efficient and reproducible way. Unfortunately —as it stands today— scientists and students alike face a steep learning curve adapting to systems that have grown too complex and end up spending more time on the technicalities of the tools, cloud and NASA APIs than focusing on their important science.\nDuring several workshops organized by NASA Openscapes, the need to provide easy-to-use tools to our users became evident. Open science is a collaborative effort; it involves people from different technical backgrounds, and the data analysis to solve the pressing problems we face cannot be limited by the complexity of the underlying systems. Therefore, providing easy access to NASA Earthdata regardless of the data storage location (hosted within or outside of the cloud) is the main motivation behind this Python library.\nTo start working with earthaccess go to getting started."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "getting_started.html#search-for-data",
+    "href": "getting_started.html#search-for-data",
+    "title": "Getting Started",
+    "section": "Search for data",
+    "text": "Search for data\nearthaccess allows you to search for and access data in as little as three steps. We give a very quick example below. Read the User Guide for more information. If you want to quickly find how to perform some common searches and data access, take a look at our How-to guide.\n\nStep 1: Login\nTo access NASA data, you have to login using your Earth Data Login credentials. You can register for a free Earth Data Login account here.\nBy default, earthaccess will look for your Earth Data Login credentials in a .netrc file, or in environment variables EARTHDATA_USERNAME and EARTHDATA_PASSWORD. If you don’t have either of these set up, you can login manually. See Authenticating to learn how to create a .netrc file or environment variables.\nimport earthaccess\n\nearthaccess.login()\n\n\nStep 2: Search for data\nAs an example, we’ll search for data from the NASA ICESat-2 mission. ATL06\nresults = earthaccess.search_data(\n    short_name='ATL06'\n    bounding_box=(-10, 20, 10, 50),\n    temporal=(\"1999-02\", \"2019-03\"),\n    count=10\n)\n\n\nStep 3. Download the files\nOnce you have found the files you want, you can download them to your local machine.\nfiles = earthaccess.download(results, \"./local_folder\")\nIf you are working in the cloud and the data files are hosted in the cloud, you can stream the data directly, without having to download data. See Direct S3 Access"
+  },
+  {
+    "objectID": "getting_started.html",
+    "href": "getting_started.html",
+    "title": "Getting Started",
+    "section": "",
+    "text": "To use earthaccess you will Python 3.8 or higher."
+  },
+  {
+    "objectID": "getting_started.html#install",
+    "href": "getting_started.html#install",
+    "title": "Getting Started",
+    "section": "Install",
+    "text": "Install\nThe latest release of earthaccess can be installed using mamba, conda or pip. We recommend mamba because it is generally faster, and it is what all the cool kids are using these days.\n\nUsing mamba\nmamba install -c conda-forge earthaccess\n\n\nUsing conda\nconda install -c conda-forge earthaccess\n\n\nUsing pip\npip install earthaccess"
+  },
+  {
+    "objectID": "user_guide.html",
+    "href": "user_guide.html",
+    "title": "User Guide",
+    "section": "",
+    "text": "This user guide provides examples and a more in-depth guide to using earthaccess to search for datasets and data files, and to access data files when working locally or in the cloud."
+  },
+  {
+    "objectID": "getting_started.html#requirements",
+    "href": "getting_started.html#requirements",
+    "title": "Getting Started",
+    "section": "",
+    "text": "To use earthaccess you will Python 3.8 or higher."
+  },
+  {
+    "objectID": "user_guide.html#authentication",
+    "href": "user_guide.html#authentication",
+    "title": "User Guide",
+    "section": "Authentication",
+    "text": "Authentication"
+  },
+  {
+    "objectID": "user_guide.html#search-for-data-sets",
+    "href": "user_guide.html#search-for-data-sets",
+    "title": "User Guide",
+    "section": "Search for data sets",
+    "text": "Search for data sets"
+  },
+  {
+    "objectID": "user_guide.html#search-for-data",
+    "href": "user_guide.html#search-for-data",
+    "title": "User Guide",
+    "section": "Search for data",
+    "text": "Search for data"
+  },
+  {
+    "objectID": "user_guide.html#download-data-to-a-local-machine",
+    "href": "user_guide.html#download-data-to-a-local-machine",
+    "title": "User Guide",
+    "section": "Download data to a local machine",
+    "text": "Download data to a local machine"
+  },
+  {
+    "objectID": "user_guide.html#working-in-the-cloud",
+    "href": "user_guide.html#working-in-the-cloud",
+    "title": "User Guide",
+    "section": "Working in the cloud",
+    "text": "Working in the cloud"
+  }
+]
