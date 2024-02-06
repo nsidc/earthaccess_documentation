@@ -145,13 +145,18 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#requirements" id="toc-requirements" class="nav-link active" data-scroll-target="#requirements">Requirements</a></li>
-  <li><a href="#install" id="toc-install" class="nav-link" data-scroll-target="#install">Install</a></li>
+  <li><a href="#install" id="toc-install" class="nav-link" data-scroll-target="#install">Install</a>
+  <ul class="collapse">
+  <li><a href="#check-earthaccess-is-installed" id="toc-check-earthaccess-is-installed" class="nav-link" data-scroll-target="#check-earthaccess-is-installed">Check <code>earthaccess</code> is installed</a></li>
+  </ul></li>
   <li><a href="#search-for-data" id="toc-search-for-data" class="nav-link" data-scroll-target="#search-for-data">Search for data</a>
   <ul class="collapse">
   <li><a href="#step-1-login" id="toc-step-1-login" class="nav-link" data-scroll-target="#step-1-login">Step 1: Login</a></li>
   <li><a href="#step-2-search-for-data" id="toc-step-2-search-for-data" class="nav-link" data-scroll-target="#step-2-search-for-data">Step 2: Search for data</a></li>
   <li><a href="#step-3.-download-the-files" id="toc-step-3.-download-the-files" class="nav-link" data-scroll-target="#step-3.-download-the-files">Step 3. Download the files</a></li>
   </ul></li>
+  <li><a href="#troubleshooting-and-issues" id="toc-troubleshooting-and-issues" class="nav-link" data-scroll-target="#troubleshooting-and-issues">Troubleshooting and issues</a></li>
+  <li><a href="#contributing" id="toc-contributing" class="nav-link" data-scroll-target="#contributing">Contributing</a></li>
   </ul>
 </nav>
     </div>
@@ -195,6 +200,29 @@ ul.task-list li input[type="checkbox"] {
 <h4 class="anchored" data-anchor-id="using-pip">Using pip</h4>
 <pre><code>pip install earthaccess</code></pre>
 </section>
+<section id="check-earthaccess-is-installed" class="level3">
+<h3 class="anchored" data-anchor-id="check-earthaccess-is-installed">Check <code>earthaccess</code> is installed</h3>
+<p>This should run seamlessly (fingers-crossed). To check <code>earthaccess</code> is correctly installed you can start a python interpreter (either python or ipython) and run the following code.</p>
+<pre><code>$ python
+Python 3.12.1 | packaged by conda-forge | (main, Dec 23 2023, 08:03:24) [GCC 12.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+&gt;&gt;&gt; import earthaccess
+&gt;&gt;&gt; earthaccess.__version__
+'0.8.2'</code></pre>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Your <code>python</code> and <code>earthaccess</code> versions may be different.</p>
+</div>
+</div>
+</section>
 </section>
 <section id="search-for-data" class="level2">
 <h2 class="anchored" data-anchor-id="search-for-data">Search for data</h2>
@@ -222,9 +250,15 @@ earthaccess.login()</code></pre>
 <p>Once you have found the files you want, you can download them to your local machine.</p>
 <pre><code>files = earthaccess.download(results, "./local_folder")</code></pre>
 <p>If you are working in the cloud and the data files are hosted in the cloud, you can stream the data directly, without having to download data. See <a href="">Direct S3 Access</a></p>
-
-
 </section>
+</section>
+<section id="troubleshooting-and-issues" class="level2">
+<h2 class="anchored" data-anchor-id="troubleshooting-and-issues">Troubleshooting and issues</h2>
+</section>
+<section id="contributing" class="level2">
+<h2 class="anchored" data-anchor-id="contributing">Contributing</h2>
+
+
 </section>
 
 </main> <!-- /main -->

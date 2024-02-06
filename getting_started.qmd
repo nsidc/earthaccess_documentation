@@ -30,6 +30,23 @@ conda install -c conda-forge earthaccess
 pip install earthaccess
 ```
 
+### Check `earthaccess` is installed
+
+This should run seamlessly (fingers-crossed).  To check `earthaccess` is correctly installed you can start a python interpreter (either python or ipython) and run the following code.
+
+```
+$ python
+Python 3.12.1 | packaged by conda-forge | (main, Dec 23 2023, 08:03:24) [GCC 12.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import earthaccess
+>>> earthaccess.__version__
+'0.8.2'
+```
+
+::: {.callout-note}
+Your `python` and `earthaccess` versions may be different.
+:::
+
 ## Search for data
 
 `earthaccess` allows you to search for and access data in as little as three steps.  We give a very quick example below.
@@ -74,3 +91,7 @@ files = earthaccess.download(results, "./local_folder")
 ```
 
 If you are working in the cloud and the data files are hosted in the cloud, you can stream the data directly, without having to download data.  See [Direct S3 Access]()
+
+## Troubleshooting and issues
+
+## Contributing

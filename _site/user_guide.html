@@ -144,7 +144,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#authentication" id="toc-authentication" class="nav-link active" data-scroll-target="#authentication">Authentication</a></li>
+  <li><a href="#authentication" id="toc-authentication" class="nav-link active" data-scroll-target="#authentication">Authentication</a>
+  <ul class="collapse">
+  <li><a href="#authenticating-using-environment-variables" id="toc-authenticating-using-environment-variables" class="nav-link" data-scroll-target="#authenticating-using-environment-variables">Authenticating using environment variables</a></li>
+  </ul></li>
   <li><a href="#search-for-data-sets" id="toc-search-for-data-sets" class="nav-link" data-scroll-target="#search-for-data-sets">Search for data sets</a></li>
   <li><a href="#search-for-data" id="toc-search-for-data" class="nav-link" data-scroll-target="#search-for-data">Search for data</a></li>
   <li><a href="#download-data-to-a-local-machine" id="toc-download-data-to-a-local-machine" class="nav-link" data-scroll-target="#download-data-to-a-local-machine">Download data to a local machine</a></li>
@@ -175,6 +178,14 @@ ul.task-list li input[type="checkbox"] {
 <p>This user guide provides examples and a more in-depth guide to using <code>earthaccess</code> to search for datasets and data files, and to access data files when working locally or in the cloud.</p>
 <section id="authentication" class="level2">
 <h2 class="anchored" data-anchor-id="authentication">Authentication</h2>
+<p>To access NASA data, you have to login using your Earth Data Login credentials. You can register for a free Earth Data Login account <a href="https://urs.earthdata.nasa.gov/">here</a>.</p>
+<p>By default, <code>earthaccess</code> will look for your Earth Data Login credentials in a <code>.netrc</code> file, or in environment variables <code>$EARTHDATA_USERNAME</code> and <code>$EARTHDATA_PASSWORD</code>. If you don’t have either of these set up, you can login manually. See <a href="authenticate.qmd">Authenticating</a> to learn how to create a <code>.netrc</code> file or environment variables.</p>
+<p>Running the following code will authenticate using your EarthData Login credentials. By default, <code>login</code> will first check if you have <code>$EARTHDATA_USERNAME</code> and <code>$EARTHDATA_PASSWORD</code> environments variables set, then it will check if you have a <code>.netrc</code> file in your <code>$HOME</code>. Finally, it will prompt for user input.</p>
+<p><em>Is it necessary to save the returned <code>__auth__</code> object?</em></p>
+<pre><code>earthaccess.login()</code></pre>
+<section id="authenticating-using-environment-variables" class="level3">
+<h3 class="anchored" data-anchor-id="authenticating-using-environment-variables">Authenticating using environment variables</h3>
+</section>
 </section>
 <section id="search-for-data-sets" class="level2">
 <h2 class="anchored" data-anchor-id="search-for-data-sets">Search for data sets</h2>
